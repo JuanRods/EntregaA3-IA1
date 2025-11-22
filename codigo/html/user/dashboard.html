@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Tok-Store</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="main-content">
+    <header>
+        <div class="logo">TOK-STORE</div>
+
+        <div class="search-container">
+            <input type="text" id="busca" placeholder="Pesquise seu jogo aqui">
+            <button class="search-btn" id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <section class="nav-in-the-box">
+            <nav>
+                <button onclick="location.href='wishlist.html'">Lista de Desejos</button>
+                <button onclick="location.href='carrinho.html'"><i class="fa-solid fa-cart-shopping"></i>
+                    Carrinho</button>
+                <button onclick="location.href='perfil.html'" id="person"><i class="fa-solid fa-user"></i></button>
+            </nav>
+        </section>
+    </header>
+<aside class="sidebar">
+  <div class="sidebar-top">
+    <img src="/img/chaos-icon.jpg" alt="Logo" class="logo-icon" />
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="dashboard.html"><i class="fa-solid fa-house"></i><span>Início</span></a></li>
+      <li><a href="explorar.html"><i class="fa-solid fa-compass"></i><span>Explorar</span></a></li>
+      <li><a href="ranking.html"><i class="fa-solid fa-ranking-star"></i><span>Ranking dos Melhores</span></a></li>
+      <li><a href="perfil.html"><i class="fa-solid fa-gear"></i><span>Configurações</span></a></li>
+      <li><a href="/login.html"><i class="fa-solid fa-right-from-bracket"></i><span>Sair</span></a></li>
+    </ul>
+  </nav>
+</aside>
+  <section class="carousel-container" aria-label="Destaques">
+    <div class="carousel-slide">
+      <div class="carousel-item" id="banner1">
+        <div class="banner-content">
+          <h2>The Witcher 3: Wild Hunt</h2>
+          <p>Explore um mundo vasto e sombrio, cheio de monstros e aventuras.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" id="banner2">
+        <div class="banner-content">
+          <h2>Zelda: Breath of the Wild</h2>
+          <p>Descubra os segredos de um reino mágico em um mundo aberto.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" id="banner3">
+        <div class="banner-content">
+          <h2>Red Dead Redemption 2</h2>
+          <p>Viva a vida de um fora da lei no Velho Oeste.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="carousel-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="nav-dots"></div>
+  </section>
+    <main class="store">
+  <div class="filter-wrapper">
+    <button id="toggle-genres"><i class="fa-solid fa-filter"></i> Filtros</button>
+  </div>
+
+  <ul class="cards-category" id="category-list" style="display: none;"></ul>
+
+  <section class="card_buys-container" id="card_buys-container"></section>
+</main>
+
+ <!-- Botão flutuante -->
+<div id="chatbot-btn" title="Falar com o assistente">
+  <i class="fa-solid fa-robot"></i>
+</div>
+
+<!-- Caixa do Chatbot -->
+<div id="chatbot-box" class="hidden" aria-hidden="true">
+  <div class="chat-header">Assistente Tok-Store</div>
+
+  <div class="chat-body" id="chat-body">
+    <p class="bot">🤖 Olá! Posso ajudar com jogos, compras ou dúvidas!</p>
+  </div>
+
+  <div class="chat-input">
+    <input id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off" />
+    <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+
+</div>
+
+
+    <footer>
+        <div>
+            <strong>Tok-Story</strong><br>
+            Descriptive line about what your company does.<br>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div>
+            <strong>Support</strong><br>
+            <a href="#">Contact</a><br>
+            <a href="#">Support</a><br>
+            <a href="#">Legal</a>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+<script src="/js/categoria.js"></script>
+
+</body>
+
+</html>
